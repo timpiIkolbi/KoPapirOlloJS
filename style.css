@@ -1,9 +1,72 @@
-.container{
+.tartalom{
     text-align: center;
     color: #19a82c;
     
 }
-.box{
+#jatek[hidden], .belepes[hidden]{
+    display:none;
+}
+.belepes{
+    min-height:100vh;
+    display:grid;
+    place-items:center;
+    padding:24px;
+    background:#e9fff0;
+    color:#174b27;
+}
+.urlap{
+    width:min(100%, 400px);
+    padding:28px;
+    border:2px solid #19a82c;
+    border-radius:8px;
+    background:#fff;
+    box-shadow:0 8px 24px #174b2720;
+}
+.urlap h1{
+    margin-bottom:8px;
+}
+.urlap p{
+    color:#355b3d;
+    text-shadow:none;
+}
+.urlap label{
+    display:block;
+    margin:16px 0 6px;
+    text-align:left;
+    font-weight:bold;
+}
+.urlap input{
+    width:100%;
+    min-height:42px;
+    padding:8px 10px;
+    border:1px solid #75977c;
+    border-radius:5px;
+    font:inherit;
+}
+.urlap input:focus{
+    outline:3px solid #abfbcb;
+    border-color:#19a82c;
+}
+.urlap .uzenet{
+    min-height:1.6em;
+    margin:10px 0 0;
+    color:#a51e1e;
+}
+.urlap button{
+    width:100%;
+    min-height:42px;
+    border:0;
+    border-radius:5px;
+    background:#19a82c;
+    color:#fff;
+    font:inherit;
+    font-weight:bold;
+    cursor:pointer;
+}
+.urlap button:hover{
+    background:#138222;
+}
+.doboz{
     width: 400px;
     margin: 0 auto;
     border-radius: 5px;

@@ -1,31 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kő - Papír - Olló</title>
     <link rel="stylesheet" href="style.css">
+    <script src="js.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <div class="box">
+    <main class="belepes" id="belepes">
+        <form class="urlap" id="urlap" novalidate>
+            <h1>Bejelentkezés</h1>
+            <p>Add meg a felhasználónevedet és az email-címedet a játékhoz.</p>
+
+            <label for="felhasznalonev">Felhasználónév</label>
+            <input id="felhasznalonev" name="felhasznalonev" type="text" autocomplete="username" required>
+
+            <label for="email">Email-cím</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+
+            <p class="uzenet" id="uzenet" role="alert" aria-live="polite"></p>
+            <button type="submit">Belépés</button>
+        </form>
+    </main>
+
+    <div class="tartalom" id="jatek" hidden>
+        <div class="doboz">
             <h1>Kő - Papír - Olló</h1>
             <h2>Válassz!</h2>
             <div class="kepek">
-                <img id="ko" src="img/ko.png">
-                <img src="img/papir.png">
-                <img src="img/ollo.png">
+
+                <img id="ko" onclick="valaszt('ko')" src="img/ko.png">
+                <img id="papir" onclick="valaszt('papir')" src="img/papir.png">
+                <img id="ollo" onclick="valaszt('ollo')" src="img/ollo.png">
             </div>
             <h2>Gép választása</h2>
             <div class="kepek">
-                <img src="img/ollo.png">
+                <img id="randomKep" src="img/ko.png">
             </div>
             
-            <h1>Eredmény: Te nyertél!</h1>
-            <h3>Te pontod</h3>
-            <p>2</p>
-            <h3>Gép pontja</h3>
-            <p>8</p>
+            <h1>Eredmény: <label for="eredmeny">Eredmény</label></h1>
+            <button id="ujra">Újra</button>
+            <h3>Te pontod:</h3>
+            <label for="tePont">0</label>
+            <h3>Gép pontja:</h3>
+            <label for="gepPont">8</label>
         </div>
     </div>
 </body>
